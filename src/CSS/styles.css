@@ -32,6 +32,26 @@ body {
   min-height: 100vh;
 }
 
+@media screen and (min-width: 1600px) {
+  .main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part {
+    max-width: 65%;
+  }
+}
+@media screen and (min-width: 2300px) {
+  .main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part {
+    max-width: 50%;
+  }
+}
+
+.main-hero, .main, .main-slider, .main-article, .main-footer {
+  overflow: hidden;
+}
+
 h1, h2, h3 {
   font-family: var(--fontTitle);
   font-weight: 600;
@@ -78,6 +98,95 @@ p, a {
 a {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.main-header {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.4rem;
+}
+@media screen and (min-width: 740px) {
+  .main-header {
+    margin-top: 2.4rem;
+    padding: 0 3.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-header {
+    padding: 0 10rem;
+  }
+}
+
+.container-header-logo {
+  width: 20rem;
+  height: 2.4rem;
+}
+.container-header-logo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.container-main-hamburguer {
+  width: 2.4rem;
+  height: 1.8rem;
+  background: linear-gradient(var(--colorBlack) 20%, transparent 20%, transparent 40%, var(--colorBlack) 40%, var(--colorBlack) 60%, transparent 60%, transparent 80%, var(--colorBlack) 80%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.container-main-hamburguer:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .container-main-hamburguer {
+    display: none;
+  }
+}
+
+.main-header__nav {
+  display: none;
+}
+@media screen and (min-width: 740px) {
+  .main-header__nav {
+    display: block;
+  }
+}
+
+.main-header__list {
+  display: flex;
+  list-style: none;
+}
+
+.main-list__item {
+  margin: 0 1.2rem;
+}
+
+.links {
+  position: relative;
+  color: var(--colorDarkGrey);
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+}
+.links::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background-color: var(--colorDarkGrey);
+  transition: all 0.5s;
+}
+.links:hover::before {
+  width: 100%;
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=styles.css.map */
