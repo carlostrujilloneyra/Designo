@@ -1,0 +1,47 @@
+// Mixins para ::before y ::after
+
+/* Mixin para before */
+
+@mixin before($top, $left, $width, $height){
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    @content;
+}
+
+/* Mixin para after */
+
+@mixin after($top, $left, $width, $height){
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    @content;
+}
+
+// Ponemos los viewports de los dispositivos
+
+$breakpoints:(
+    mobile:360px,
+    tablet:740px,
+    desktop:1024px
+);
+
+// Realizamos el mixin para el diseño responsivo
+
+@mixin responsive ($breakpoint) {
+    @if(map-has-key($breakpoints, $breakpoint)){
+        @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }@else if(type-of($breakpoint)== number and unit($breakpoint)=='px'){
+        @media screen and (min-width: $breakpoint){
+            @content;
+        }
+    }
+}
