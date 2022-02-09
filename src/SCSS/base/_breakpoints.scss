@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part{
+	
+    @include responsive(1600px){
+        max-width: 80%;
+    }
+
+    @include responsive(1900px){
+        max-width: 65%;
+    }
+
+    @include responsive(2300px){
+        max-width: 50%;
+    }
+}
+
+.main-hero, .main, .main-slider, .main-article, .main-footer{
+    overflow: hidden;
+}
