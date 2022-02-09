@@ -1,0 +1,19 @@
+{
+  "name": "designo-website",
+  "version": "1.0.0",
+  "description": "Cuarto proyecto a realizar, del lado Frontend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlostrujilloneyra/Designo.git"
+  },
+  "author": "Carlos Trujillo Neyra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlostrujilloneyra/Designo/issues"
+  },
+  "homepage": "https://github.com/carlostrujilloneyra/Designo#readme"
+}
