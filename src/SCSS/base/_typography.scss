@@ -1,0 +1,45 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+h1, h2, h3{
+	font-family: var(--fontTitle);
+	font-weight: 600;
+}
+
+h1{
+	font-size: 3.2rem;
+	@include responsive(tablet){
+		font-size: 4.8rem;
+	}
+}
+
+h2{
+	font-size: 2.8rem;
+	font-weight: 400;
+	letter-spacing: .2rem;
+	@include responsive(tablet){
+		font-size: 4rem;
+	}
+}
+
+h3{
+	font-weight: 400;
+	font-size: 1.5rem;
+	letter-spacing: .5rem;
+}
+
+p, a{
+	font-family: var(--fontText);
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.56;
+
+	@include responsive(tablet){
+		font-size: 1.6rem;
+	}
+}
+
+a{
+	font-size: 1.5rem;
+	font-weight: 600;
+}
