@@ -1,0 +1,19 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.container-main-hamburguer{
+    width: 2.4rem;
+    height: 1.8rem;
+    background: linear-gradient(var(--colorBlack) 20%,transparent 20%,transparent 40%,var(--colorBlack) 40%,var(--colorBlack) 60%, transparent 60%,transparent 80%,var(--colorBlack) 80%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all .5s;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    @include responsive(700px){
+        display: none;
+    }
+}

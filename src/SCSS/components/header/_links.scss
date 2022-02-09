@@ -1,0 +1,35 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Items
+.main-list__item{
+	margin: 0 1.2rem;
+}
+
+
+// Enlaces
+.links{
+	position: relative;
+	color: var(--colorDarkGrey);
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: .4rem .8rem;
+
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: .2rem;
+		background-color: var(--colorDarkGrey);
+		transition: all .5s;
+	}
+
+	&:hover::before{
+		width: 100%;
+		transition: all .5s;
+	}
+}

@@ -1,0 +1,13 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.container-header-logo{
+	width: 20rem;
+	height: 2.4rem;
+
+	& img{
+		display: block;
+		width: 100%;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,16 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-header__nav{
+	display: none;
+
+	@include responsive(tablet){
+		display: block;
+	}
+}
+
+// Lista
+.main-header__list{
+	display: flex;
+	list-style: none;
+}
