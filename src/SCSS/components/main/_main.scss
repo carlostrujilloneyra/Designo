@@ -1,0 +1,14 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	row-gap: 2.4rem;
+
+	@include responsive(desktop){
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 3.2rem;
+	}
+}
