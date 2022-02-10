@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part{
+.main-header, .main-hero, .main, .main-article, .main-footer{
 	
     @include responsive(1600px){
         max-width: 80%;
@@ -16,6 +16,6 @@
     }
 }
 
-.main-hero, .main, .main-slider, .main-article, .main-footer{
+.main-hero, .main, .main-article, .main-footer{
     overflow: hidden;
 }
