@@ -43,22 +43,22 @@ body {
 }
 
 @media screen and (min-width: 1600px) {
-  .main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part {
+  .main-header, .main-hero, .main, .main-article, .main-footer {
     max-width: 80%;
   }
 }
 @media screen and (min-width: 1900px) {
-  .main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part {
+  .main-header, .main-hero, .main, .main-article, .main-footer {
     max-width: 65%;
   }
 }
 @media screen and (min-width: 2300px) {
-  .main-header, .main-hero, .main, .main-slider, .main-article, .main-footer, .footer-last-part {
+  .main-header, .main-hero, .main, .main-article, .main-footer {
     max-width: 50%;
   }
 }
 
-.main-hero, .main, .main-slider, .main-article, .main-footer {
+.main-hero, .main, .main-article, .main-footer {
   overflow: hidden;
 }
 
@@ -510,12 +510,12 @@ a {
   align-items: center;
   position: relative;
   justify-content: center;
+  background-image: url("../../assets/home/mobile/image-web-design.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-radius: 1.6rem;
   overflow: hidden;
   z-index: 200;
-  background-image: url("../../assets/home/mobile/image-web-design.jpg");
 }
 @media screen and (min-width: 740px) {
   .main__first-part, .second-part__app, .second-part__graphic {
@@ -570,6 +570,12 @@ a {
     background-image: url("../../assets/home/desktop/image-app-design.jpg");
   }
 }
+.second-part__app::after {
+  transform: translateX(-100%);
+}
+.second-part__app:hover::after {
+  transform: translateX(0);
+}
 
 .second-part__graphic {
   background-image: url("../../assets/home/mobile/image-graphic-design.jpg");
@@ -583,6 +589,12 @@ a {
   .second-part__graphic {
     background-image: url("../../assets/home/desktop/image-graphic-design.jpg");
   }
+}
+.second-part__graphic::after {
+  transform: translateX(100%);
+}
+.second-part__graphic:hover::after {
+  transform: translateX(0);
 }
 
 .main-subtitle {
