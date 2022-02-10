@@ -38,8 +38,11 @@
 		}
 	}
 
-	@include responsive(1900px){
+	@include responsive(1600px){
 		column-gap: 2.4rem;
+	}
+
+	@include responsive(1900px){
 
 		&__third-part{
 			justify-self: center;
@@ -101,7 +104,7 @@
 
 .container-content{
 	
-	@include responsive(700px){
+	@include responsive(600px){
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
