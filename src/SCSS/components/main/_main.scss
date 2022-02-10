@@ -36,12 +36,12 @@
 	align-items: center;
 	position: relative;
 	justify-content: center;
+	background-image: url('../../assets/home/mobile/image-web-design.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	border-radius: 1.6rem;
 	overflow: hidden;
 	z-index: 200;
-	background-image: url('../../assets/home/mobile/image-web-design.jpg');
 
 	@include responsive(tablet){
 		background-image: url('../../assets/home/tablet/image-web-design.jpg');
@@ -91,6 +91,14 @@
 	@include responsive(desktop){
 		background-image: url('../../assets/home/desktop/image-app-design.jpg');
 	}
+
+	&::after{
+		transform: translateX(-100%);
+	}
+
+	&:hover::after{
+		transform: translateX(0);
+	}
 }
 
 .second-part__graphic{
@@ -102,5 +110,13 @@
 
 	@include responsive(desktop){
 		background-image: url('../../assets/home/desktop/image-graphic-design.jpg');
+	}
+
+	&::after{
+		transform: translateX(100%);
+	}
+
+	&:hover::after{
+		transform: translateX(0);
 	}
 }
