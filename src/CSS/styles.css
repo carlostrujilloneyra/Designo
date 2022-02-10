@@ -480,7 +480,7 @@ a {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 25rem 52.4rem;
   row-gap: 2.4rem;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
   padding: 0 2.4rem;
 }
 @media screen and (min-width: 740px) {
@@ -493,7 +493,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, minmax(63rem, 64rem));
     column-gap: 3.2rem;
-    margin-bottom: 16rem;
+    margin-bottom: 14rem;
     padding: 0;
   }
 }
@@ -611,6 +611,166 @@ a {
 .main-view {
   color: white;
   text-transform: uppercase;
+}
+
+.main-article {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, minmax(38rem, 40rem));
+  row-gap: 4.8rem;
+  margin-bottom: 10rem;
+  padding: 0 2.4rem;
+}
+@media screen and (min-width: 740px) {
+  .main-article {
+    grid-template-rows: repeat(3, minmax(20rem, 21rem));
+    row-gap: 2.4rem;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-article {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-rows: repeat(1, minmax(41rem, 42rem));
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+    margin-bottom: 12rem;
+  }
+  .main-article__third-part {
+    justify-self: center;
+    grid-column: 1/3;
+    max-width: 46rem;
+  }
+}
+@media screen and (min-width: 1330px) {
+  .main-article__third-part {
+    justify-self: flex-start;
+    grid-column: auto;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .main-article {
+    column-gap: 2.4rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .main-article__third-part {
+    justify-self: center;
+    grid-column: 1/3;
+    max-width: 48rem;
+  }
+}
+@media screen and (min-width: 1930px) {
+  .main-article__third-part {
+    justify-self: flex-start;
+    grid-column: auto;
+    width: auto;
+  }
+}
+@media screen and (min-width: 2300px) {
+  .main-article__third-part {
+    justify-self: center;
+    grid-column: 1/3;
+    max-width: 46rem;
+  }
+}
+@media screen and (min-width: 2445px) {
+  .main-article__third-part {
+    justify-self: flex-start;
+    grid-column: auto;
+    width: auto;
+  }
+}
+
+.main-article__first-part, .main-article__second-part, .main-article__third-part {
+  display: grid;
+  grid-template-rows: minmax(20.2rem, 21rem) minmax(16.2rem, 17rem);
+  justify-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 740px) {
+  .main-article__first-part, .main-article__second-part, .main-article__third-part {
+    grid-template-columns: minmax(20.2rem, 21rem) 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    column-gap: 5.6rem;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-article__first-part, .main-article__second-part, .main-article__third-part {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(20.2rem, 21rem) minmax(16.2rem, 17rem);
+    row-gap: 3.2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 0.8rem;
+  }
+}
+@media screen and (min-width: 740px) {
+  .container-content {
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-content {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container-image {
+  position: relative;
+}
+.container-image img {
+  transition: all 0.5s;
+}
+.container-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/home/desktop/bg-pattern-hero-home.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: all 0.5s;
+  z-index: -200;
+}
+.container-image:hover img {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.article-subtitle {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .main-paragraph {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-paragraph {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 2800px) {
+  .main-paragraph {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
