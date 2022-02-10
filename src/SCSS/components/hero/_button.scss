@@ -1,0 +1,21 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-button{
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--colorDarkGrey);
+	padding: 1.6rem 2.4rem;
+	margin-bottom: 2.4rem;
+	z-index: 200;
+
+	&::before{
+		@include before(0, 0, 100%, 100%){
+			background-color: var(--colorWhite);
+			border-radius: .8rem;
+			z-index: -100;
+		}
+	}
+}

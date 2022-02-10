@@ -1,0 +1,18 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-paragraph--hero{
+	color: white;
+	margin-bottom: 2.4rem;
+	text-align: center;
+
+	@include responsive(700px){
+		width: 70%;
+	}
+
+	@include responsive(desktop){
+		width: 80%;
+		margin-bottom: 4.2rem;
+		text-align: start;
+	}
+}

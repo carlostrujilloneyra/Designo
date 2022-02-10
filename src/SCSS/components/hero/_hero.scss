@@ -1,0 +1,194 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-hero{
+	width: 100%;
+	background-color: var(--colorPeach);
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: minmax(30rem, 32rem) minmax(38rem, 41rem);
+	row-gap: 2.4rem;
+	margin-bottom: 12rem;
+	padding: 0 2.4rem;
+	padding-top: 6.4rem;
+	z-index: 500;
+
+	@include responsive(500px){
+		grid-template-rows: minmax(24rem, 27rem) minmax(38rem, 44rem);
+	}
+
+	@include responsive(600px){
+		grid-template-rows: minmax(24rem, 27rem) minmax(36rem, 38rem);
+	}
+
+	@include responsive(tablet){
+		grid-template-rows: minmax(28rem, 34rem) minmax(42rem, 46rem);
+		border-radius: 1.6rem;
+	}
+
+	@include responsive(800px){
+		grid-template-rows: minmax(32rem, 34rem) minmax(42rem, 46rem);
+	}
+	
+	@include responsive(870px){
+		grid-template-rows: minmax(28rem, 30rem) minmax(50rem, 55rem);
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: minmax(54rem, 55rem) minmax(min-content, max-content);
+		grid-template-rows: repeat(1, minmax(64rem, 66rem));
+		align-items: center;
+		column-gap: 2.4rem;
+		padding: 0 10rem;
+		margin-bottom: 16rem;
+	}
+}
+
+// Main-hero-info
+.main-hero__info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include responsive(desktop){
+		align-items: flex-start;
+	}
+}
+
+// Main-hero-image
+
+.main-hero__image{
+	position: relative;
+
+	& img{
+		width: 100%;
+		display: block;
+		transform: scale(1.8) translateY(4rem);
+
+		@include responsive(500px){
+			transform: scale(1.6) translateY(0);
+		}
+
+		@include responsive(600px){
+			transform: scale(1) translateY(-16rem);
+		}
+
+		@include responsive(tablet){
+			transform: scale(1) translateY(-14rem);
+		}
+
+		@include responsive(760px){
+			transform: scale(1) translateY(-14rem);
+		}
+
+		@include responsive(830px){
+			transform: scale(1) translateY(-16rem);
+		}
+
+		@include responsive(860px){
+			transform: scale(1) translateY(-18rem);
+		}
+
+		@include responsive(870px){
+			transform: scale(1) translateY(-20rem);
+		}
+
+		@include responsive(desktop){
+			width: auto;
+			height: 80rem;
+			transform: translateX(-18rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1200px){
+			transform: translateX(-12rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1300px){
+			transform: translateX(-8rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1370px){
+			transform: translateX(-2rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1450px){
+			transform: translateX(5rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1500px){
+			transform: translateX(10rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1580px){
+			transform: translateX(15rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(1600px){
+			transform: translateX(2rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(2100px){
+			transform: translateX(6rem) translateY(9rem) scale(1.1);
+		}
+
+		@include responsive(2800px){
+			transform: translateX(20rem) translateY(9rem) scale(1.1);
+		}
+	}
+
+	&::before{
+		@include before(-36rem, 0, 110%, 120%){
+			left: auto;
+			right: -4rem;
+			background-image: url('../../../../assets/home/desktop/bg-pattern-hero-home.svg');
+			background-repeat: no-repeat;
+			z-index: -200;
+		}
+
+		@include responsive(500px){
+			top: -24rem;
+			right: -10rem;
+			height: 140%;
+		}
+
+		@include responsive(600px){
+			top: -30rem;
+			right: -15rem;
+		}
+
+		@include responsive(860px){
+			right: -28rem;
+		}
+
+		@include responsive(940px){
+			right: -33rem;
+		}
+
+		@include responsive(desktop){
+			width: 120%;
+			height: 80%;
+			top: 8rem;
+			right: 4rem;
+		}
+
+		@include responsive(1300px){
+			right: -4rem;
+		}
+
+		@include responsive(1450px){
+			right: -14rem;
+		}
+
+		@include responsive(1500px){
+			right: -24rem;
+		}
+
+		@include responsive(1600px){
+			right: -12rem;
+		}
+
+		@include responsive(2800px){
+			right: -27rem;
+		}
+	}
+}
