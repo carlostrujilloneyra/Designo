@@ -1,0 +1,25 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.container-image{
+	position: relative;
+
+	& img{
+		transition: all .5s;
+	}
+
+	&::before{
+		@include before(0,0, 100%, 100%){
+			background-image: url('../../../../assets/home/desktop/bg-pattern-hero-home.svg');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			transition: all .5s;
+			z-index: -200;
+		}
+	}
+
+	&:hover img{
+		transform: scale(1.2);
+		transition: all .5s;
+	}
+}

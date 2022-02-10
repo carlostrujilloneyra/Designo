@@ -1,0 +1,120 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-article{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, minmax(38rem, 40rem));
+	row-gap: 4.8rem;
+	margin-bottom: 10rem;
+	padding: 0 2.4rem;
+
+	@include responsive(tablet){
+		grid-template-rows: repeat(3, minmax(20rem, 21rem));
+		row-gap: 2.4rem;
+		padding: 0;
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+		grid-template-rows: repeat(1, minmax(41rem, 42rem));
+		column-gap: 3.2rem;
+		row-gap: 3.2rem;
+		margin-bottom: 12rem;
+
+		&__third-part{
+			justify-self: center;
+			grid-column: 1/3;
+			max-width: 46rem;
+		}
+	}
+
+	@include responsive(1330px){
+		&__third-part{
+			justify-self: flex-start;
+			grid-column: auto;
+			width: auto;
+		}
+	}
+
+	@include responsive(1900px){
+		column-gap: 2.4rem;
+
+		&__third-part{
+			justify-self: center;
+			grid-column: 1/3;
+			max-width: 48rem;
+		}
+	}
+
+	@include responsive(1930px){
+		&__third-part{
+			justify-self: flex-start;
+			grid-column: auto;
+			width: auto;
+		}
+	}
+
+	@include responsive(2300px){
+		&__third-part{
+			justify-self: center;
+			grid-column: 1/3;
+			max-width: 46rem;
+		}
+	}
+
+	@include responsive(2445px){
+		&__third-part{
+			justify-self: flex-start;
+			grid-column: auto;
+			width: auto;
+		}
+	}
+
+}
+
+// Primera Parte
+
+.main-article__first-part, .main-article__second-part, .main-article__third-part{
+	display: grid;
+	grid-template-rows: minmax(20.2rem, 21rem) minmax(16.2rem, 17rem);
+	justify-items: center;
+	text-align: center;
+
+	@include responsive(tablet){
+		grid-template-columns: minmax(20.2rem, 21rem) 1fr;
+		grid-template-rows: repeat(1, 1fr);
+		column-gap: 5.6rem;
+		text-align: start;
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: minmax(20.2rem, 21rem) minmax(16.2rem, 17rem);
+		row-gap: 3.2rem;
+		text-align: center;
+	}
+}
+
+// Container-content
+
+.container-content{
+	
+	@include responsive(700px){
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1.2rem .8rem;
+	}
+
+	@include responsive(tablet){
+		align-items: flex-start;
+	}
+
+	@include responsive(desktop){
+		align-items: center;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,23 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.article-subtitle{
+	font-size: 2rem;
+	margin-bottom: 2.4rem;
+}
+
+.main-paragraph{
+	
+	@include responsive(tablet){
+		width: 90%;
+	}
+
+	@include responsive(desktop){
+		width: 100%;
+	}
+
+	@include responsive(2800px){
+		width: 90%;
+	}
+
+}
