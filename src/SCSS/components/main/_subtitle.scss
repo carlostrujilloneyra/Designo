@@ -1,0 +1,19 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-subtitle{
+	color: white;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+
+	@include responsive(desktop){
+		margin-bottom: 2.4rem;
+	}
+}
+
+// Estilos para la etiqueta h3
+
+.main-view{
+	color: white;
+	text-transform: uppercase;
+}
