@@ -3,14 +3,28 @@
 
 .main-hero{
 	width: 100%;
-	background-color: var(--colorPeach);
+	margin-bottom: 6.4rem;
+	
+	@include responsive(tablet){
+		padding: 0 3.6rem;
+		margin-bottom: 9.6rem;
+	}
+
+	@include responsive(desktop){
+		padding: 0 10rem;
+		margin-bottom: 12rem;
+	}
+}
+
+.main-hero__container{
 	display: grid;
+	background-color: var(--colorPeach);
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: minmax(30rem, 32rem) minmax(38rem, 41rem);
 	row-gap: 2.4rem;
-	margin-bottom: 10rem;
 	padding: 0 2.4rem;
 	padding-top: 6.4rem;
+	overflow: hidden;
 	z-index: 500;
 
 	@include responsive(500px){
@@ -22,7 +36,7 @@
 	}
 
 	@include responsive(tablet){
-		grid-template-rows: minmax(28rem, 34rem) minmax(42rem, 46rem);
+		grid-template-rows: minmax(32rem, 35rem) minmax(42rem, 46rem);
 		border-radius: 1.6rem;
 	}
 
@@ -31,18 +45,27 @@
 	}
 	
 	@include responsive(870px){
+		grid-template-rows: minmax(33rem, 35rem) minmax(50rem, 55rem);
+	}
+
+	@include responsive(970px){
 		grid-template-rows: minmax(28rem, 30rem) minmax(50rem, 55rem);
 	}
 
 	@include responsive(desktop){
-		grid-template-columns: minmax(54rem, 55rem) minmax(min-content, max-content);
+		grid-template-columns: minmax(47rem, 49rem) minmax(min-content, max-content);
 		grid-template-rows: repeat(1, minmax(64rem, 66rem));
 		align-items: center;
-		column-gap: 2.4rem;
-		padding: 0 10rem;
-		margin-bottom: 12rem;
+		column-gap: 3.6rem;
+		padding: 0 6.4rem;
+	}
+
+	@include responsive(1200px){
+		grid-template-columns: minmax(54rem, 55rem) minmax(min-content, max-content);
 	}
 }
+
+
 
 // Main-hero-info
 .main-hero__info{
@@ -74,7 +97,7 @@
 		}
 
 		@include responsive(tablet){
-			transform: scale(1) translateY(-14rem);
+			transform: scale(1) translateY(-12rem);
 		}
 
 		@include responsive(760px){
@@ -96,7 +119,7 @@
 		@include responsive(desktop){
 			width: auto;
 			height: 80rem;
-			transform: translateX(-18rem) translateY(9rem) scale(1.1);
+			transform: translateX(-15rem) translateY(9rem) scale(1.1);
 		}
 
 		@include responsive(1200px){
@@ -137,23 +160,20 @@
 	}
 
 	&::before{
-		@include before(-36rem, 0, 110%, 120%){
+		@include before(-36rem, 0, 64rem, 64rem){
 			left: auto;
-			right: -4rem;
+			right: 14rem;
 			background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
 			background-repeat: no-repeat;
-			z-index: -200;
 		}
 
 		@include responsive(500px){
 			top: -24rem;
 			right: -10rem;
-			height: 140%;
 		}
 
 		@include responsive(600px){
 			top: -30rem;
-			right: -15rem;
 		}
 
 		@include responsive(860px){
@@ -165,30 +185,40 @@
 		}
 
 		@include responsive(desktop){
-			width: 120%;
-			height: 80%;
 			top: 8rem;
-			right: 4rem;
+			right: 6rem;
 		}
 
 		@include responsive(1300px){
+			right: 4rem;
+		}
+
+		@include responsive(1350px){
 			right: -4rem;
 		}
 
-		@include responsive(1450px){
-			right: -14rem;
+		@include responsive(1440px){
+			right: -8rem;
 		}
 
-		@include responsive(1500px){
-			right: -24rem;
+		@include responsive(1490px){
+			right: -16rem;
 		}
 
 		@include responsive(1600px){
-			right: -12rem;
+			right: -4rem;
 		}
 
-		@include responsive(2800px){
-			right: -27rem;
+		@include responsive(2400px){
+			right: -8rem;
+		}
+
+		@include responsive(2780px){
+			right: -20rem;
+		}
+
+		@include responsive(3000px){
+			right: -24rem;
 		}
 	}
 }

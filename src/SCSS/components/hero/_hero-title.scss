@@ -8,10 +8,11 @@
 	margin-bottom: 2.4rem;
 
 	@include responsive(tablet){
-		width: 85%;
+		width: 75%;
 	}
 
 	@include responsive(desktop){
+		width: 80%;
 		text-align: start;
 	}
 }
