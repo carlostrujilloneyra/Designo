@@ -2,18 +2,38 @@
 @use '../../abstracts/mixins' as *;
 
 .main-section{
+	width: 100%;
+	padding: 0 2.4rem;
+	// transform: translateY(9.6rem);
+	transform: translateY(7rem);
+	z-index: 400;
+
+	@include responsive(tablet){
+		padding: 0 3.6rem;
+		transform: translateY(8rem);
+	}
+
+	@include responsive(desktop){
+		padding: 0 10rem;
+	}
+
+}
+
+// Contenedor
+
+.main-section__container{
 	position: relative;
-	width: calc(100% - 2.4rem);
-	background-color: var(--colorPeach);
+	width: 100%;
 	display: grid;
+	background-color: var(--colorPeach);
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: minmax(16rem, 17rem) minmax(5.6rem, 6rem);
 	row-gap: 2.8rem;
 	text-align: center;
-	margin-bottom: 4rem;
 	padding: 6.4rem 2.4rem;
 	border-radius: 1.6rem;
 	z-index: 100;
+	overflow: hidden;
 
 	&::before{
 		@include before(-12rem, 0, 100%, 50rem){
@@ -21,7 +41,7 @@
 			background-repeat: no-repeat;
 			transform: rotateY(180deg);
 			z-index: -100;
-
+			
 			@include responsive(700px){
 				left: auto;
 				width: 90rem;
@@ -33,46 +53,61 @@
 
 			@include responsive(tablet){
 				width: 96rem;
-				right: -12rem;
+				right: -15rem;
+			}
+
+			@include responsive(820px){
+				right: -8rem;
 			}
 
 			@include responsive(900px){
+				right: -4rem;
 				width: 100rem;
 			}
 
 			@include responsive(desktop){
-				width: 96rem;
+				top: -12rem;
+				right: -8rem;
+			}
+
+			@include responsive(1300px){
+				right: 2rem;
 			}
 		}
 	}
 
-	@include responsive(510px){
-		grid-template-rows: minmax(10rem, 12rem) minmax(5.6rem, 6rem);
+	@include responsive(470px){
+		grid-template-rows: minmax(13rem, 15rem) minmax(5.6rem, 6.4rem);
+	}
+
+	@include responsive(530px){
+		grid-template-rows: minmax(10rem, 12rem) minmax(5.6rem, 6.4rem);
 	}
 
 	@include responsive(700px){
-		grid-template-rows: minmax(16rem, 17rem) minmax(5.6rem, 6rem);
-		padding: 6.4rem;
+		grid-template-rows: minmax(16rem, 17rem) minmax(5.6rem, 6.4rem);
+		padding: 6.4rem 3.6rem;
 	}
 
-	@include responsive(890px){
-		grid-template-rows: minmax(12rem, 13rem) minmax(5.6rem, 6rem);
+	@include responsive(805px){
+		grid-template-rows: minmax(12rem, 13rem) minmax(5.6rem, 6.4rem);
 	}
 
 	@include responsive(desktop){
 		text-align: start;
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: 3.2rem;
-		grid-template-rows: repeat(1 ,1fr);
+		column-gap: 2.4rem;
+		grid-template-rows: repeat(1, 1fr);
 		align-items: center;
-		padding: 7.2rem;
+		padding: 6.4rem;
 
-		&__button{
+		& .main-section__button{
 			justify-self: flex-end;
 		}
 	}
 
 }
+
 
 // Información
 
