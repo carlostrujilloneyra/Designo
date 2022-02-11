@@ -11,6 +11,7 @@
 	padding: 0 2.4rem;
 
 	@include responsive(tablet){
+		padding: 0 3.6rem;
 		grid-template-rows: 20rem 42.4rem;
 	}
 
@@ -19,7 +20,7 @@
 		grid-template-rows: repeat(1, minmax(63rem, 64rem));
 		column-gap: 3.2rem;
 		margin-bottom: 14rem;
-		padding: 0;
+		padding: 0 10rem;
 	}
 
 	@include responsive(1800px){
