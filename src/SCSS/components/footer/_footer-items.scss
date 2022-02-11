@@ -1,0 +1,41 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Items
+
+.main-list-footer__item{
+	margin-bottom: 2.4rem;	
+
+	@include responsive(700px){
+		margin: 0 1.2rem;
+	}
+}
+
+// Enlaces
+
+.main-footer__link{
+	position: relative;
+	color: var(--colorWhite);
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: .4rem .8rem;
+	transition: all .5s;
+
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: .1rem;
+		background-color: var(--colorWhite);
+		transition: all .5s;
+	}
+
+	&:hover::before{
+		width: 100%;
+		transition: all .5s;
+	}
+}

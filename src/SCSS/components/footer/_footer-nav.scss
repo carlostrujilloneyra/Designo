@@ -1,0 +1,15 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Lista
+
+.main-footer__list{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+
+	@include responsive(700px){
+		flex-direction: row;
+		align-items: center;
+	}
+}
