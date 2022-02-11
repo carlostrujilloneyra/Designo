@@ -1,0 +1,43 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-section__subtitle{
+	font-size: 3.2rem;
+	color: white;
+	line-height: 1;
+	margin-bottom: 2.4rem;
+
+	@include responsive(700px){
+		font-size: 4rem;
+		width: 80%;
+	}
+
+	@include responsive(desktop){
+		width: 100%;
+		margin-bottom: 1.6rem;
+	}
+
+	@include responsive(1350px){
+		width: 80%;
+		margin-bottom: 2.4rem;
+	}
+}
+
+// Parrafo
+
+.main-paragraph--section{
+	color: white;
+	margin-bottom: 1.2rem;
+
+	@include responsive(700px){
+		width: 80%;
+	}
+
+	@include responsive(desktop){
+		width: 100%;
+	}
+
+	@include responsive(1350px){
+		width: 80%;
+	}
+}
