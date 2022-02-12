@@ -1,0 +1,38 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Lista
+
+.main-footer__social-networks{
+	list-style: none;
+}
+
+// Enlaces de las redes sociales
+
+.social-network{
+	display: inline-block;
+	width: 2.4rem;
+	height: 2.4rem;
+	text-decoration: none;
+	margin-right: 1.6rem;
+	transition: all .5s;
+
+	@include responsive(tablet){
+		margin-right: 1.2rem;
+	}
+
+	@include responsive(desktop){
+		margin-right: 1.6rem;
+	}
+
+	& img{
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+
+	&:hover{
+		filter: brightness(1.3);
+		transform: scale(1.5);
+		transition: all .5s;
+	}
+}
