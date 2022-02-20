@@ -21,7 +21,6 @@
 		grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 		grid-template-rows: repeat(1, minmax(41rem, 42rem));
 		column-gap: 3.2rem;
-		row-gap: 3.2rem;
 		margin-bottom: 4.8rem;
 		padding: 0 10rem;
 
@@ -34,17 +33,36 @@
 
 	@include responsive(1330px){
 		&__third-part{
-			justify-self: flex-start;
 			grid-column: auto;
 			width: auto;
 		}
 	}
 
 	@include responsive(1600px){
+		grid-template-columns: repeat(3, minmax(35rem, 1fr));
 		column-gap: 2.4rem;
 	}
 
 	@include responsive(1900px){
+		grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+		
+		&__third-part{
+			justify-self: center;
+			grid-column: 1/3;
+			max-width: 48rem;
+		}
+	}
+
+	@include responsive(2020px){
+		grid-template-columns: repeat(3, minmax(35rem, 1fr));
+
+		&__third-part{
+			grid-column: auto;
+		}
+	}
+
+	@include responsive(2300px){
+		grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 
 		&__third-part{
 			justify-self: center;
@@ -53,30 +71,13 @@
 		}
 	}
 
-	@include responsive(1930px){
+	@include responsive(2610px){
+		grid-template-columns: repeat(3, minmax(35rem, 1fr));
+
 		&__third-part{
-			justify-self: flex-start;
 			grid-column: auto;
-			width: auto;
 		}
 	}
-
-	@include responsive(2300px){
-		&__third-part{
-			justify-self: center;
-			grid-column: 1/3;
-			max-width: 46rem;
-		}
-	}
-
-	@include responsive(2445px){
-		&__third-part{
-			justify-self: flex-start;
-			grid-column: auto;
-			width: auto;
-		}
-	}
-
 }
 
 // Primera Parte
