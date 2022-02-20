@@ -660,6 +660,7 @@ a {
   color: var(--colorDarkGrey);
   padding: 1.6rem 2.4rem;
   margin-bottom: 2.4rem;
+  transition: all 0.5s;
   z-index: 200;
 }
 .main-button::before {
@@ -671,7 +672,14 @@ a {
   height: 100%;
   background-color: var(--colorWhite);
   border-radius: 0.8rem;
+  transition: all 0.5s;
   z-index: -100;
+}
+.main-button:hover::before {
+  background-color: var(--colorLightPeach);
+}
+.main-button:hover {
+  color: var(--colorWhite);
 }
 
 .main {
@@ -1463,6 +1471,13 @@ a {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .main-about__container--second::before {
+    left: -4rem;
+    right: 0;
+  }
+}
+
 .main-about__image {
   background-image: url("../../assets/about/mobile/image-world-class-talent.jpg");
   background-repeat: no-repeat;
@@ -1507,6 +1522,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .main-about__info--edit {
+    order: -2;
+  }
+}
+
 .main-title--about {
   color: var(--colorPeach);
   margin-bottom: 2.4rem;
@@ -1533,6 +1554,38 @@ a {
 @media screen and (min-width: 2800px) {
   .main-paragraph--about {
     width: 85%;
+  }
+}
+
+.main-about__image--edit {
+  background-image: url("../../assets/about/desktop/image-real-deal.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+@media screen and (min-width: 700px) {
+  .main-about__image--edit {
+    background-image: url("../../assets/about/tablet/image-real-deal.jpg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-about__image--edit {
+    background-image: url("../../assets/about/desktop/image-real-deal.jpg");
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main-paragraph--about-edit {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .main-paragraph--about-edit {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .main-paragraph--about-edit {
+    width: 90%;
   }
 }
 
@@ -1572,8 +1625,6 @@ a {
 
 .main-button--about {
   color: var(--colorWhite);
-  transition: all 0.6s;
-  opacity: 1;
 }
 .main-button--about::before {
   content: "";
@@ -1583,9 +1634,6 @@ a {
   width: 100%;
   height: 100%;
   background-color: var(--colorPeach);
-  border-radius: 0.8rem;
-  z-index: -100;
-  transition: all 0.6s;
 }
 .main-button--about:hover::before {
   background-color: var(--colorLightPeach);
