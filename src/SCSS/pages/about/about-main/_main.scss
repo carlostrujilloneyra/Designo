@@ -1,0 +1,126 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.main-about{
+	width: 100%;
+
+	@include responsive(700px){
+		padding: 0 3.6rem;
+	}
+
+	@include responsive(desktop){
+		padding: 0 10rem;
+	}
+}
+
+.main-about__container{
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: minmax(32rem, 34rem) minmax(39rem, 42rem);
+	row-gap: 4.8rem;
+	background-color: var(--colorCrema);
+	padding-bottom: 6.4rem;
+	overflow: hidden;
+	z-index: 500;
+	
+	&::before{
+		@include before(30rem, -2rem, 100%, 100%){
+			background-image: url('../../assets/shared/desktop/bg-pattern-three-circles.svg');
+			background-repeat: no-repeat;
+			z-index: -100;
+		}
+
+		@include responsive(700px){
+			left: auto;
+			top: 18rem;
+			right: -10rem;
+		}
+		
+		@include responsive(desktop){
+			top: auto;
+			right: 4rem;
+			width: 60rem;
+			height: 30rem;
+			bottom: -1rem;
+			background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+			}
+		}
+	
+		@include responsive(500px){
+			grid-template-rows: minmax(34rem, 36rem) minmax(36rem, 39rem);
+			row-gap: 3.6rem;
+		}
+	
+		@include responsive(600px){
+			grid-template-rows: minmax(32rem, 36rem) minmax(36rem, 39rem);
+		}
+
+		@include responsive(700px){
+			border-radius: 1.6rem;
+		}
+	
+		@include responsive(tablet){
+			grid-template-rows: minmax(30rem, 33rem) minmax(36rem, 38rem);
+			border-radius: 1.6rem;
+		}
+	
+		@include responsive(desktop){
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(1, minmax(63rem, 65rem));
+			column-gap: 4.8rem;
+			padding: 0;
+		}
+
+		@include responsive(1300px){
+			grid-template-columns: minmax(47rem, 48rem) 1fr;
+
+			& .main-about__info{
+				justify-self: flex-end;
+			}
+		}
+	
+}
+
+// Contenedor de la imagen
+.main-about__image{
+	background-image: url('../../assets/about/mobile/image-world-class-talent.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	@include responsive(700px){
+		background-image: url('../../assets/about/tablet/image-world-class-talent.jpg');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/about/desktop/image-world-class-talent.jpg');
+	}
+
+}
+
+// Contenedor de la info
+.main-about__info{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 3.6rem;
+	padding: 0 2.4rem;
+	
+
+	@include responsive(tablet){
+		margin-top: 2.4rem;
+	}
+
+	@include responsive(desktop){
+		margin-top: 0;
+		text-align: start;
+		align-items: flex-start;
+	}
+
+	@include responsive(1600px){
+		padding: 0 3.6rem;
+	}
+}

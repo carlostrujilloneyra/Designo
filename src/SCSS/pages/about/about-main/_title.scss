@@ -1,0 +1,30 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+// Title
+.main-title--about{
+	color: var(	--colorPeach);
+	margin-bottom: 2.4rem;
+}
+
+// Text
+.main-paragraph--about{
+	margin-bottom: 3.2rem;
+
+	@include responsive(1300px){
+		width: 90%;
+	}
+
+	@include responsive(1500px){
+		width: 85%;
+	}
+
+	@include responsive(1600px){
+		width: 90%;
+	}
+
+	@include responsive(2800px){
+		width: 85%;
+	}
+
+}
