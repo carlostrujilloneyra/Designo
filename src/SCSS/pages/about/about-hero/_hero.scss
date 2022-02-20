@@ -1,0 +1,193 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.main-hero--about{
+	margin-bottom: 0;
+
+	@include responsive(700px){
+		margin-bottom: 12rem;
+	}
+
+	@include responsive(desktop){
+		margin-bottom: 16rem;
+	}
+}
+
+.main-hero__container--about{
+	align-items: center;
+	grid-template-rows: minmax(32rem, 33rem) minmax(26rem, 28rem);
+	row-gap: 6.4rem;
+	padding: 6.4rem 0;
+	padding-top: 0;
+
+	@include responsive(450px){
+		grid-template-rows: minmax(30rem, 32rem) minmax(22rem, 24rem);
+	}
+
+	@include responsive(600px){
+		grid-template-rows: minmax(30rem, 32rem) minmax(18rem, 20rem);
+		row-gap: 3.2rem;
+	}
+	
+	@include responsive(tablet){
+		grid-template-rows: minmax(32rem, 33rem) minmax(26rem, 29rem);
+	}
+
+	@include responsive (830px){
+		grid-template-rows: minmax(32rem, 33rem) minmax(24rem, 26rem);
+	}
+	
+	@include responsive(desktop){
+		grid-template-rows: repeat(1, minmax(47rem, 49rem));
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0;
+	}
+
+	@include responsive(1300px){
+		grid-template-columns: 1fr minmax(47rem, 48rem);
+	}
+}
+
+// Contenedor de la info
+
+.main-hero__info--about{
+	position: relative;
+	order: 2;
+	padding: 0 2.4rem;
+	z-index: 100;
+
+	&::before{
+
+		@include responsive(desktop){
+			@include after(-25rem, -18rem, 64rem, 64rem){
+				background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				transform: rotate(135deg);
+				opacity: .7;
+			}
+		}
+
+		@include responsive(1180px){
+			left: -15rem;
+		}
+
+		@include responsive(1280px){
+			left: -10rem;
+		}
+
+		@include responsive(1310px){
+			left: -5rem;
+		}
+
+		@include responsive(1410px){
+			left: 2rem;
+		}
+
+		@include responsive(1600px){
+			left: -4rem;
+		}
+
+		@include responsive(1800px){
+			left: 2rem;
+		}
+
+		@include responsive(1900px){
+			left: -8rem;
+		}
+
+		@include responsive(2100px){
+			left: -2rem;
+		}
+
+		@include responsive(2300px){
+			left: -12rem;
+			opacity: .6;
+		}
+
+		@include responsive(2650px){
+			width: 66rem;
+			height: 66rem;
+			left: -2rem;
+		}
+
+		@include responsive(2700px){
+			width: 70rem;
+		}
+
+		@include responsive(3040px){
+			left: 0;
+		}
+
+
+	}
+
+	@include responsive(700px){
+		padding: 0 3.6rem;
+	}
+
+	@include responsive(desktop){
+		padding: 0;
+		padding-left: 6.4rem;
+		order: -2;
+	}
+}
+
+// Parrafo del contenedor de info
+
+.main-paragraph--hero-about{
+
+	@include responsive(tablet){
+		width: 90%;
+	}
+
+	@include responsive(desktop){
+		width: 80%;
+	}
+}
+
+// Contenedor de la imagen de hero
+
+.main-hero__image--about{
+	position: relative;
+	height: 100%;
+	background-image: url('../../assets/about/mobile/image-about-hero.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	&::after{
+
+		@include after(8rem, 0, 100%, 40rem){
+			left: auto;
+			right: -4rem;
+			background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			transform: rotate(135deg);
+			opacity: .8;
+		}
+
+		@include responsive(tablet){
+			top: 0rem;
+			left: -10rem;
+			right: 0;
+			width: 64rem;
+			height: 64rem;
+			opacity: .4;
+		}
+
+		@include responsive(desktop){
+			display: none;
+		}
+
+	}
+
+	@include responsive(700px){
+		background-image: url('../../assets/about/tablet/image-about-hero.jpg');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/about/desktop/image-about-hero.jpg');
+	}
+
+}
