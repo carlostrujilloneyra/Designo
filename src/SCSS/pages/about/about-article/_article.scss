@@ -1,0 +1,38 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.main-article--about{
+	grid-template-rows: repeat(3, minmax(32rem, 34rem));
+	row-gap: 3.6rem;
+	margin-bottom: 12rem;
+
+	@include responsive(tablet){
+		row-gap: 4.8rem;
+	}
+
+	@include responsive(desktop){
+		grid-template-rows: repeat(1, minmax(35rem, 37rem));
+		margin-bottom: 16rem;
+	}
+}
+
+// Editar los contenedores de las imágenes y texto
+.article-part-edit{
+
+	@include responsive(tablet){
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	@include responsive(desktop){
+		grid-template-rows: minmax(20.2rem, 21rem) minmax(12rem, 15rem);
+	}
+}
+
+
+// Container de la info
+.container-content--about{
+
+	@include responsive(tablet){
+		align-items: center;
+	}
+}
