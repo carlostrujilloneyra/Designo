@@ -1,0 +1,16 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.main-about__image--edit{
+	background-image: url('../../assets/about/desktop/image-real-deal.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	@include responsive(700px){
+		background-image: url('../../assets/about/tablet/image-real-deal.jpg');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/about/desktop/image-real-deal.jpg');
+	}
+}

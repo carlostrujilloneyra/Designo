@@ -3,15 +3,10 @@
 
 .main-button--about{
 	color: var(--colorWhite);
-	transition: all .6s;
-	opacity: 1;
-
+	
 	&::before{
 		@include before(0, 0, 100%, 100%){
 			background-color: var(--colorPeach);
-			border-radius: .8rem;
-			z-index: -100;
-			transition: all .6s;
 		}
 	}
 

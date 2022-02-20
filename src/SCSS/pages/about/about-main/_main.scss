@@ -84,6 +84,15 @@
 	
 }
 
+.main-about__container--second{
+	@include responsive(desktop){
+		&::before{
+			left: -4rem;
+			right: 0;
+		}
+	}
+}
+
 // Contenedor de la imagen
 .main-about__image{
 	background-image: url('../../assets/about/mobile/image-world-class-talent.jpg');
@@ -124,5 +133,12 @@
 
 	@include responsive(1600px){
 		padding: 0 3.6rem;
+	}
+}
+
+// Contenedor del segundo main
+.main-about__info--edit{
+	@include responsive(desktop){
+		order: -2;
 	}
 }

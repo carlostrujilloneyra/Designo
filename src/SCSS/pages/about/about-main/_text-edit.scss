@@ -1,0 +1,17 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.main-paragraph--about-edit{
+
+	@include responsive(1400px){
+		width: 85%;
+	}
+
+	@include responsive(1500px){
+		width: 75%;
+	}
+
+	@include responsive(1600px){
+		width: 90%;
+	}
+}
