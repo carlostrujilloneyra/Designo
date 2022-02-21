@@ -1,0 +1,19 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+// Title 
+.main-title-projects{
+	margin-bottom: 2.4rem;
+}
+
+// Text
+.main-paragraph-projects{
+	@include responsive(desktop){
+		width: 80%;
+	}
+
+	@include responsive(1300px){
+		width: 75%;
+	}
+}
+
