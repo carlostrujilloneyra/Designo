@@ -2,35 +2,10 @@
 @use '../../abstracts/mixins' as *;
 
 .main-hero-services{
-	position: relative;
 	width: 100%;
 	margin-bottom: 12rem;
 	overflow: hidden;
-	
-	&::before{
-		@include before(1rem,-15rem, 60rem, 100%){
-			background-image: url('../../../../assets/shared/desktop/bg-pattern-two-circles.svg');
-			background-repeat: no-repeat;
-		}
 
-		@include responsive(580px){
-			left: -5rem;
-		}
-
-		@include responsive(tablet){
-			top: -15rem;
-			left: auto;
-			right: 6rem;
-			width: 90rem;
-			height: 60rem;
-			background-image: url('../../../../assets/shared/desktop/bg-pattern-call-to-action.svg');
-		}
-
-		@include responsive(desktop){
-			right: 10rem;
-		}
-	}
-	
 	@include responsive(tablet){
 		padding: 0 3.6rem;
 	}
@@ -42,6 +17,7 @@
 }
 
 .container-services{
+	position: relative;
 	width: 100%;
 	display: grid;
 	grid-template-rows: repeat(1, minmax(31rem, 32rem));
@@ -51,6 +27,32 @@
 	text-align: center;
 	color: white;
 	padding: 0 2.4rem;
+	overflow: hidden;
+
+	&::before{
+		@include before(1rem,-18rem, 60rem, 100%){
+			background-image: url('../../../../assets/shared/desktop/bg-pattern-two-circles.svg');
+			background-repeat: no-repeat;
+		}
+
+		@include responsive(580px){
+			left: -4rem;
+		}
+
+		@include responsive(tablet){
+			top: -18rem;
+			left: auto;
+			right: -12rem;
+			width: 90rem;
+			height: 50rem;
+			background-image: url('../../../../assets/shared/desktop/bg-pattern-call-to-action.svg');
+		}
+
+		@include responsive(desktop){
+			right: -3rem;
+		}
+	}
+	
 	
 	@include responsive(tablet){
 		grid-template-rows: repeat(1, minmax(25rem, 26rem));
