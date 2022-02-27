@@ -2,12 +2,12 @@
 @use '../../abstracts/mixins' as *;
 
 // Title 
-.main-title-projects{
+.main-title-services{
 	margin-bottom: 2.4rem;
 }
 
 // Text
-.main-paragraph-projects{
+.main-paragraph-services{
 	@include responsive(desktop){
 		width: 80%;
 	}

@@ -1,7 +1,7 @@
 @use '../../abstracts/variables' as *;
 @use '../../abstracts/mixins' as *;
 
-.main-hero-projects{
+.main-hero-services{
 	position: relative;
 	width: 100%;
 	margin-bottom: 12rem;
@@ -41,7 +41,7 @@
 	}
 }
 
-.container-projects{
+.container-services{
 	width: 100%;
 	display: grid;
 	grid-template-rows: repeat(1, minmax(31rem, 32rem));
@@ -60,7 +60,7 @@
 }
 
 // Contenedor de la info
-.container-projects-info{
+.container-services-info{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
