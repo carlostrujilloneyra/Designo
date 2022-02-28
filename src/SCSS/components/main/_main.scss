@@ -7,7 +7,7 @@
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: 25rem 52.4rem;
 	row-gap: 2.4rem;
-	margin-bottom: 10rem;
+	margin-bottom: 12rem;
 	padding: 0 2.4rem;
 
 	@include responsive(tablet){
@@ -19,7 +19,7 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(1, minmax(63rem, 64rem));
 		column-gap: 3.2rem;
-		margin-bottom: 14rem;
+		margin-bottom: 16rem;
 		padding: 0 10rem;
 	}
 
@@ -31,12 +31,11 @@
 // Primera parte
 
 .main__first-part, .second-part__app, .second-part__graphic{
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-items: center;
-	align-items: center;
-	position: relative;
 	justify-content: center;
+	align-items: center;
 	background-image: url('../../assets/home/mobile/image-web-design.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -57,10 +56,10 @@
 			@include after(0, 0, 120%, 120%){
 				background-color: var(--colorPeach);
 				border-radius: 1.6rem;
-				opacity: .6;
 				transform: translateY(-100%);
-				transition: all .6s;
+				transition: all .5s;
 				overflow: hidden;
+				opacity: .6;
 				z-index: -200;
 			}
 		}
@@ -68,7 +67,7 @@
 
 	&:hover::after{
 		transform: translateY(0%);
-		transition: all .6s;
+		transition: all .5s;
 	}
 }
 
