@@ -27,7 +27,7 @@
 	z-index: 500;
 	
 	&::before{
-		@include before(30rem, -2rem, 100%, 100%){
+		@include before(30rem, 0, 100%, 100%){
 			background-image: url('../../assets/shared/desktop/bg-pattern-three-circles.svg');
 			background-repeat: no-repeat;
 			z-index: -100;
@@ -48,7 +48,6 @@
 			background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
 			}
 		}
-	
 		@include responsive(500px){
 			grid-template-rows: minmax(34rem, 36rem) minmax(36rem, 39rem);
 			row-gap: 3.6rem;
@@ -86,10 +85,15 @@
 
 .main-about__container--second{
 	@include responsive(desktop){
+
 		&::before{
 			left: -4rem;
 			right: 0;
 		}
+	}
+
+	@include responsive(1300px){
+		grid-template-columns: 1fr minmax(47rem, 48rem);
 	}
 }
 
