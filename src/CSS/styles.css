@@ -1407,7 +1407,7 @@ a {
   content: "";
   position: absolute;
   top: 30rem;
-  left: -2rem;
+  left: 0;
   width: 100%;
   height: 100%;
   background-image: url("../../assets/shared/desktop/bg-pattern-three-circles.svg");
@@ -1474,6 +1474,11 @@ a {
   .main-about__container--second::before {
     left: -4rem;
     right: 0;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main-about__container--second {
+    grid-template-columns: 1fr minmax(47rem, 48rem);
   }
 }
 
@@ -1709,6 +1714,11 @@ a {
   background-image: url("../../assets/locations/desktop/image-map-canada.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  transition: all 0.5s;
+}
+.location-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0.4rem 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 700px) {
   .location-image {
