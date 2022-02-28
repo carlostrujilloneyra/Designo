@@ -1981,6 +1981,20 @@ a {
   transition: all 0.5s;
 }
 
+.article__first-part--web-design {
+  background-image: url("../../assets/home/mobile/image-web-design.jpg");
+}
+@media screen and (min-width: 740px) {
+  .article__first-part--web-design {
+    background-image: url("../../assets/home/desktop/image-web-design-small.jpg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .article__first-part--web-design {
+    background-image: url("../../assets/home/desktop/image-web-design-small.jpg");
+  }
+}
+
 .article__second-part {
   background-image: url("../../assets/home/mobile/image-graphic-design.jpg");
 }
@@ -2013,6 +2027,44 @@ a {
 @media screen and (min-width: 1024px) {
   .service-article-subtitle {
     margin-bottom: 2.4rem;
+  }
+}
+
+.main-services__container--app-design {
+  grid-template-rows: repeat(5, 48rem);
+}
+@media screen and (min-width: 740px) {
+  .main-services__container--app-design {
+    grid-template-rows: repeat(5, 32rem);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-services__container--app-design {
+    grid-template-rows: repeat(3, 48rem);
+  }
+}
+@media screen and (min-width: 1320px) {
+  .main-services__container--app-design {
+    grid-template-rows: repeat(2, 48rem);
+  }
+}
+
+.card-paragraph--app-design {
+  width: 80%;
+}
+@media screen and (min-width: 700px) {
+  .card-paragraph--app-design {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 740px) {
+  .card-paragraph--app-design {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-paragraph--app-design {
+    width: 90%;
   }
 }
 
