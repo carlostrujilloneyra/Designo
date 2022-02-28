@@ -19,15 +19,50 @@
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(6, 48rem);
 	row-gap: 3.6rem;
+	margin-bottom: 12rem;
 
-	@include responsive(tablet){
+	@include responsive(500px){
+		grid-template-columns: repeat(1, .8fr);
+		justify-content: center;
+	}
+
+	@include responsive(700px){
+		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(6, 31rem);
 		row-gap: 3.2rem;
+		justify-content: flex-start;
 	}
 
 	@include responsive(desktop){
-		grid-template-columns: repeat(3, minmax(35rem, 1fr));
+		grid-template-columns: repeat(2, minmax(35rem, 40rem));
+		grid-template-rows: repeat(3, 48rem);
+		row-gap: 3.6rem;
 		column-gap: 3.2rem;
+		justify-content: center;
+	}
+	
+	@include responsive(1320px){
+		// Aquí hay que corregir
+		grid-template-columns: repeat(3,minmax(35rem, 1fr));
 		grid-template-rows: repeat(2, 48rem);
+		justify-content: flex-start;
+	}
+
+	@include responsive(1600px){
+		grid-template-columns: repeat(3, minmax(30rem, 35rem));
+		justify-content: center;
+	}
+
+	@include responsive(1900px){
+		grid-template-columns: repeat(3, minmax(32rem, 35rem));
+		justify-content: flex-start;
+	}
+
+	@include responsive(2100px){
+		grid-template-columns: repeat(3, minmax(35rem, 1fr));
+	}
+
+	@include responsive(2300px){
+		grid-template-columns: repeat(3, minmax(30rem, 1fr));
 	}
 }
