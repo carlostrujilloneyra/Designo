@@ -1,0 +1,31 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.main-services__container--graphic-design{
+	grid-template-rows: repeat(3, 48rem);
+
+	@include responsive(700px){
+		grid-template-rows: repeat(3, 32rem);
+	}
+
+	@include responsive(desktop){
+		grid-template-rows: repeat(2, 48rem);
+	}
+
+	@include responsive(1320px){
+		grid-template-rows: repeat(1, 48rem);
+	}
+}
+
+// Estilos para el texto
+.card-paragraph--graphic-design{
+	width: 90%;
+
+	@include responsive(900px){
+		width: 70%;
+	}
+
+	@include responsive(desktop){
+		width: 90%;
+	}
+}

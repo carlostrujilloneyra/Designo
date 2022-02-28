@@ -83,7 +83,7 @@
 
 }
 
-// Estilos diferentes (graphic-design.html)
+// Estilos diferentes (app-design.html)
 .article__first-part--web-design{
 	background-image: url('../../assets/home/mobile/image-web-design.jpg');
 
@@ -115,6 +115,19 @@
 	&:hover::after{
 		transform: translateX(0%);
 		transition: all .6s;
+	}
+}
+
+// Estilos diferentes (graphic-design.html)
+.article__second-part--web-design{
+	background-image: url('../../assets/home/mobile/image-web-design.jpg');
+
+	@include responsive(tablet){
+		background-image: url('../../assets/home/desktop/image-web-design-small.jpg');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/home/desktop/image-web-design-small.jpg');
 	}
 }
 
