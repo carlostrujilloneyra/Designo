@@ -1,0 +1,20 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.location-title{
+	font-size: 3.2rem;
+	color: var(--colorPeach);
+	margin-bottom: 2.4rem;
+
+	@include responsive(700px){
+		font-size: 4rem;
+	}
+}
+
+.location-paragraph{
+	margin-bottom: .4rem;
+}
+
+.location-paragraph--bold{
+	font-weight: 600;
+}

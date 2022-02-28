@@ -1,0 +1,36 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+// Elemento padre
+.main-locations{
+	width: 100%;
+	margin-bottom: 6.4rem;
+
+	@include responsive(tablet){
+		padding: 0 3.6rem;
+		margin-bottom: 7.2rem;
+	}
+
+	@include responsive(desktop){
+		padding: 0 10rem;
+		margin-bottom: 10rem;
+	}
+}
+
+// Elemento que se realizará Grid
+.main-locations__container{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 72rem);
+	row-gap: 3.6rem;
+
+	@include responsive(700px){
+		row-gap: 4.8rem;
+	}
+
+	@include responsive(desktop){
+		grid-template-rows: repeat(3, 33rem);
+		row-gap: 3.2rem;
+	}
+
+}

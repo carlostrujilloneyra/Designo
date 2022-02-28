@@ -1,0 +1,150 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+// Grid al contenedor de locations
+.main-locations__canada, .main-locations__australia, .main-locations__uk{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 32rem 40rem;
+
+	@include responsive(700px){
+		grid-template-rows: repeat(2, 33rem);
+		row-gap: 2.4rem;
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: 1fr 33rem;
+		grid-template-rows: repeat(1, 33rem);
+		column-gap: 3.2rem;
+		row-gap: 0;
+
+		& .location-image{
+			order: 2;
+		}
+	}
+}
+
+// Algunos cambios para cuando esté en desktop
+.main-locations__australia{
+	@include responsive(desktop){
+		grid-template-columns: 33rem 1fr;
+
+		& .location-image{
+			order: -2;
+		}
+	}
+}
+
+// Imagen de location (Canada)
+.location-image{
+	background-image: url('../../assets/locations/desktop/image-map-canada.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	@include responsive(700px){
+		background-image: url('../../assets/locations/tablet/image-map-canada.png');
+		border-radius: 1.6rem;
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/locations/desktop/image-map-canada.png');
+	}
+}
+
+// Imagen de location (Australia)
+.location-image--australia{
+	background-image: url('../../assets/locations/desktop/image-map-australia.png');
+
+	@include responsive(700px){
+		background-image: url('../../assets/locations/tablet/image-map-australia.png');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/locations/desktop/image-map-australia.png');
+	}
+}
+
+// Imagen de location (UK)
+.location-image--uk{
+	background-image: url('../../assets/locations/desktop/image-map-united-kingdom.png');
+
+	@include responsive(700px){
+		background-image: url('../../assets/locations/tablet/image-map-uk.png');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/locations/desktop/image-map-united-kingdom.png');
+	}
+}
+
+// Info de locations
+.location-info{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--colorCrema);
+	z-index: 200;
+	overflow: hidden;
+
+	&::before{
+		@include before(-2rem, 0, 100%, 60rem){
+			background-image: url('../../assets/shared/desktop/bg-pattern-three-circles.svg');
+			background-repeat: no-repeat;
+			z-index: -200;
+		}
+
+		@include responsive(700px){
+			top: 4rem;
+			left: 4rem;
+			width: 60rem;
+			height: 30rem;
+			background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+		}
+
+		@include responsive(desktop){
+			left: -2rem;
+		}
+
+		@include responsive(1200px){
+			left: 2rem;
+		}
+	}
+	
+	@include responsive(700px){
+		text-align: start;
+		align-items: flex-start;
+		padding: 0 3.6rem;
+		border-radius: 1.6rem;
+	}
+
+	@include responsive(desktop){
+		padding: 0 4.8rem;
+	}
+}
+
+// Contenedor de los textos
+.location-text{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	row-gap: 2.4rem;
+	padding: .4rem 1.2rem;
+
+	@include responsive(700px){
+		width: 100%;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.2rem;
+		row-gap: 0;
+		padding: 0;
+	}
+
+	@include responsive(desktop){
+		column-gap: 2.4rem;
+	}
+
+	@include responsive(1320px){
+		width: 90%;
+	}
+}
