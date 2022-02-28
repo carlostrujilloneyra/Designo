@@ -202,17 +202,17 @@ body {
 }
 
 @media screen and (min-width: 1600px) {
-  .main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-section, .section-services, .main-footer, .main-services {
+  .main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-locations, .main-section, .section-services, .main-footer, .main-services {
     max-width: 80%;
   }
 }
 @media screen and (min-width: 1900px) {
-  .main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-section, .section-services, .main-footer, .main-services {
+  .main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-locations, .main-section, .section-services, .main-footer, .main-services {
     max-width: 65%;
   }
 }
 @media screen and (min-width: 2300px) {
-  .main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-section, .section-services, .main-footer, .main-services {
+  .main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-locations, .main-section, .section-services, .main-footer, .main-services {
     max-width: 50%;
   }
 }
@@ -1636,6 +1636,218 @@ a {
 }
 .main-button--about:hover::before {
   background-color: var(--colorLightPeach);
+}
+
+.main-locations {
+  width: 100%;
+  margin-bottom: 6.4rem;
+}
+@media screen and (min-width: 740px) {
+  .main-locations {
+    padding: 0 3.6rem;
+    margin-bottom: 7.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-locations {
+    padding: 0 10rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.main-locations__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 72rem);
+  row-gap: 3.6rem;
+}
+@media screen and (min-width: 700px) {
+  .main-locations__container {
+    row-gap: 4.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-locations__container {
+    grid-template-rows: repeat(3, 33rem);
+    row-gap: 3.2rem;
+  }
+}
+
+.main-locations__canada, .main-locations__australia, .main-locations__uk {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 32rem 40rem;
+}
+@media screen and (min-width: 700px) {
+  .main-locations__canada, .main-locations__australia, .main-locations__uk {
+    grid-template-rows: repeat(2, 33rem);
+    row-gap: 2.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-locations__canada, .main-locations__australia, .main-locations__uk {
+    grid-template-columns: 1fr 33rem;
+    grid-template-rows: repeat(1, 33rem);
+    column-gap: 3.2rem;
+    row-gap: 0;
+  }
+  .main-locations__canada .location-image, .main-locations__australia .location-image, .main-locations__uk .location-image {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-locations__australia {
+    grid-template-columns: 33rem 1fr;
+  }
+  .main-locations__australia .location-image {
+    order: -2;
+  }
+}
+
+.location-image {
+  background-image: url("../../assets/locations/desktop/image-map-canada.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+@media screen and (min-width: 700px) {
+  .location-image {
+    background-image: url("../../assets/locations/tablet/image-map-canada.png");
+    border-radius: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location-image {
+    background-image: url("../../assets/locations/desktop/image-map-canada.png");
+  }
+}
+
+.location-image--australia {
+  background-image: url("../../assets/locations/desktop/image-map-australia.png");
+}
+@media screen and (min-width: 700px) {
+  .location-image--australia {
+    background-image: url("../../assets/locations/tablet/image-map-australia.png");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location-image--australia {
+    background-image: url("../../assets/locations/desktop/image-map-australia.png");
+  }
+}
+
+.location-image--uk {
+  background-image: url("../../assets/locations/desktop/image-map-united-kingdom.png");
+}
+@media screen and (min-width: 700px) {
+  .location-image--uk {
+    background-image: url("../../assets/locations/tablet/image-map-uk.png");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location-image--uk {
+    background-image: url("../../assets/locations/desktop/image-map-united-kingdom.png");
+  }
+}
+
+.location-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--colorCrema);
+  z-index: 200;
+  overflow: hidden;
+}
+.location-info::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  width: 100%;
+  height: 60rem;
+  background-image: url("../../assets/shared/desktop/bg-pattern-three-circles.svg");
+  background-repeat: no-repeat;
+  z-index: -200;
+}
+@media screen and (min-width: 700px) {
+  .location-info::before {
+    top: 4rem;
+    left: 4rem;
+    width: 60rem;
+    height: 30rem;
+    background-image: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location-info::before {
+    left: -2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .location-info::before {
+    left: 2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .location-info {
+    text-align: start;
+    align-items: flex-start;
+    padding: 0 3.6rem;
+    border-radius: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location-info {
+    padding: 0 4.8rem;
+  }
+}
+
+.location-text {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 2.4rem;
+  padding: 0.4rem 1.2rem;
+}
+@media screen and (min-width: 700px) {
+  .location-text {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 0;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location-text {
+    column-gap: 2.4rem;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .location-text {
+    width: 90%;
+  }
+}
+
+.location-title {
+  font-size: 3.2rem;
+  color: var(--colorPeach);
+  margin-bottom: 2.4rem;
+}
+@media screen and (min-width: 700px) {
+  .location-title {
+    font-size: 4rem;
+  }
+}
+
+.location-paragraph {
+  margin-bottom: 0.4rem;
+}
+
+.location-paragraph--bold {
+  font-weight: 600;
 }
 
 .main-hero-services {
