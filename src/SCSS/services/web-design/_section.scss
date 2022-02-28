@@ -80,6 +80,20 @@
 		transform: translateX(0%);
 		transition: all .5s;
 	}
+
+}
+
+// Estilos diferentes (graphic-design.html)
+.article__first-part--web-design{
+	background-image: url('../../assets/home/mobile/image-web-design.jpg');
+
+	@include responsive(tablet){
+		background-image: url('../../assets/home/desktop/image-web-design-small.jpg');
+	}
+
+	@include responsive(desktop){
+		background-image: url('../../assets/home/desktop/image-web-design-small.jpg');
+	}
 }
 
 // Segunda parte
