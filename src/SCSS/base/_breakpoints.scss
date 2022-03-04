@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-locations,.main-section, .section-services,.main-footer, .main-services{
+.main-header, .main-hero, .main-hero-services, .main, .main-about, .main-article, .main-locations,.main-section, .main-form, .section-services,.main-footer, .main-services{
 	
     @include responsive(1600px){
         max-width: 80%;
@@ -16,6 +16,6 @@
     }
 }
 
-.main-hero, .main, .main-article, .main-section, .main-footer{
+.main-hero, .main, .main-article, .main-section, .main-form, .main-footer{
     overflow: hidden;
 }
