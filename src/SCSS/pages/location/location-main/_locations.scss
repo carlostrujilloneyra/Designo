@@ -42,11 +42,6 @@
 	background-size: 100% 100%;
 	transition: all .5s;
 
-	&:hover{
-		transform: scale(1.1);
-		box-shadow: .4rem .8rem .8rem rgba(0,0,0,.2);
-	}
-
 	@include responsive(700px){
 		background-image: url('../../assets/locations/tablet/image-map-canada.png');
 		border-radius: 1.6rem;
@@ -54,6 +49,11 @@
 
 	@include responsive(desktop){
 		background-image: url('../../assets/locations/desktop/image-map-canada.png');
+
+		&:hover{
+			transform: scale(1.1);
+			box-shadow: .4rem .8rem .8rem rgba(0,0,0,.2);
+		}
 	}
 }
 
