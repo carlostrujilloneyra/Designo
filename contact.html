@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Designo-Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="src/CSS/styles.css">
+</head>
+<body>
+
+	<!-- Header -->
+
+	<header class="main-header">
+		
+		<!-- Logo -->
+		<div class="container-header-logo">
+			<img src="assets/shared/desktop/logo-dark.png" class="main-header__logo" alt="logo">
+		</div>
+
+		<!-- Barra de navegación -->
+		<nav class="main-header__nav">
+			
+			<!-- Lista con los items -->
+			<ul class="main-header__list">
+				<li class="main-list__item"><a class="links" href="about.html">Our Company</a></li>
+				<li class="main-list__item"><a class="links" href="locations.html">Locations</a></li>
+				<li class="main-list__item"><a class="links" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Menú Hamburguesa -->
+		<div class="container-main-hamburguer"></div>
+	</header>
+
+	<!-- Form -->
+
+	<div class="main-form">
+		
+		<!-- Aplicaremos Grid -->
+		<div class="main-form__container">
+
+			<!-- Contenedor para el título y texto -->
+			<div class="main-form__info">
+				<h1 class="main-title main-title--form">Contact Us</h1>
+				<p class="main-paragraph main-paragraph--form">Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
+			</div>
+
+			<!-- Contenedor del formulario -->
+			<div class="container-form">
+
+				<!-- Formulario -->
+				<form action="#" autocomplete="off">
+					<input type="text" placeholder="Name" name="name" class="input-text" id="name" autocomplete="off">
+					<input type="email" placeholder="Email Address" name="email" class="input-text" id="email" autocomplete="off">
+					<input type="text" placeholder="Phone" name="phone" class="input-text" id="phone" autocomplete="off">
+					<textarea rows="12" placeholder="Your Message" class="text-area" id="message" autocomplete="off"></textarea>
+
+					<!-- Botón Submit -->
+					<div class="container-form-button">
+						<a href="#" class="main-button main-button--submit" id="button-submit">SUBMIT</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Article -->
+
+	<article class="main-article main-article--about">
+
+		<div class="main-article__first-part article-part-edit">
+
+			<!-- Contenedor de imagen 1 -->
+			<div class="container-image">
+				<img src="assets/shared/desktop/illustration-canada.svg" alt="illustration-canada">
+			</div>
+			
+			<!-- Contenedor para el subtítulo y texto -->
+			<div class="container-content container-content--about">
+				<h2 class="article-subtitle">CANADA</h2>
+				<a href="#" class="main-button main-button--about">SEE LOCATION</a>
+			</div>
+		</div>
+
+		<div class="main-article__second-part article-part-edit">
+
+			<!-- Contenedor de imagen 2 -->
+			<div class="container-image">
+				<img src="assets/shared/desktop/illustration-australia.svg" alt="illustration-australia">
+			</div>
+
+			<!-- Contenedor para el subtítulo y texto -->
+			<div class="container-content container-content--about">
+				<h2 class="article-subtitle">AUSTRALIA</h2>
+				<a href="#" class="main-button main-button--about">SEE LOCATION</a>
+			</div>
+		</div>
+
+		<div class="main-article__third-part article-part-edit article-part-edit--third">
+			
+			<!-- Contenedor de imagen 3 -->
+			<div class="container-image">
+				<img src="assets/shared/desktop/illustration-united-kingdom.svg" alt="illustration-united-kingdom">
+			</div>
+
+			<!-- Contenedor para el subtítulo y texto -->
+			<div class="container-content container-content--about">
+				<h2 class="article-subtitle">UNITED KINGDOM</h2>
+				<a href="#" class="main-button main-button--about">SEE LOCATION</a>
+			</div>
+
+		</div>
+
+	</article>
+	
+	<!-- Footer -->
+
+	<footer class="main-footer">
+		<div class="container-footer-header">
+			<header class="main-footer__header">
+				
+				<!-- Logo -->
+				<div class="container-header-logo">
+					<img src="assets/shared/desktop/logo-light.png" class="main-header__logo" alt="logo">
+				</div>
+				
+				<!-- Barra de navegación -->
+				<nav class="main-footer__nav">
+					
+					<!-- Lista con los items -->
+					<ul class="main-footer__list">
+						<li class="main-list-footer__item"><a class="main-footer__link" href="#">Our Company</a></li>
+						<li class="main-list-footer__item"><a class="main-footer__link" href="#">Locations</a></li>
+						<li class="main-list-footer__item"><a class="main-footer__link" href="#">Contact</a></li>
+					</ul>
+				</nav>
+				
+			</header>
+		</div>
+
+		<!-- Info del footer: location, contac y las redes sociales -->
+		<div class="container-footer-info">
+
+			<div class="info-location">
+				<p class="footer-text footer-text--bold">Designo Central Office</p>
+				<p class="footer-text">3886 Wellington Street</p>
+				<p class="footer-text">Toronto, Ontario M9C 3K5</p>
+			</div>
+
+			<div class="info-cell-email">
+				<p class="footer-text footer-text--bold">Contact Us (Central Office)</p>
+				<p class="footer-text footer-text--bold">P : +1 253-863-8967</p>
+				<p class="footer-text footer-text--bold">M : contact@designo.com</p>
+			</div>
+
+			<!-- Lista con las redes sociales -->
+			<ul class="main-footer__social-networks">
+
+				<a href="#" class="social-network">
+					<img src="assets/shared/desktop/icon-facebook.svg" alt="icon-facebook">
+				</a>
+
+				<a href="#" class="social-network">
+					<img src="assets/shared/desktop/icon-youtube.svg" alt="icon-youtube">
+				</a>
+
+				<a href="#" class="social-network">
+					<img src="assets/shared/desktop/icon-twitter.svg" alt="icon-twitter">
+				</a>
+
+				<a href="#" class="social-network">
+					<img src="assets/shared/desktop/icon-pinterest.svg" alt="icon-pinterest">
+				</a>
+
+				<a href="#" class="social-network">
+					<img src="assets/shared/desktop/icon-instagram.svg" alt="icon-instagram">
+				</a>
+			</ul>
+
+		</div>
+	</footer>
+</body>
+</html>
