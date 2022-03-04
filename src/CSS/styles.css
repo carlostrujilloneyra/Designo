@@ -1717,10 +1717,6 @@ a {
   background-size: 100% 100%;
   transition: all 0.5s;
 }
-.location-image:hover {
-  transform: scale(1.1);
-  box-shadow: 0.4rem 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
-}
 @media screen and (min-width: 700px) {
   .location-image {
     background-image: url("../../assets/locations/tablet/image-map-canada.png");
@@ -1730,6 +1726,10 @@ a {
 @media screen and (min-width: 1024px) {
   .location-image {
     background-image: url("../../assets/locations/desktop/image-map-canada.png");
+  }
+  .location-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0.4rem 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
   }
 }
 
