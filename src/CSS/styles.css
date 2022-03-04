@@ -1894,7 +1894,7 @@ a {
   left: -4rem;
   width: 60rem;
   height: 30rem;
-  background-image: url("../../../../../assets/shared/desktop/bg-pattern-two-circles.svg");
+  background-image: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
 }
 @media screen and (min-width: 540px) {
   .main-form__container::before {
@@ -1907,7 +1907,7 @@ a {
     left: 0rem;
     width: 58rem;
     height: 60rem;
-    background-image: url("../../../../../assets/home/desktop/bg-pattern-hero-home.svg");
+    background-image: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
     background-size: 58rem 60rem;
   }
 }
