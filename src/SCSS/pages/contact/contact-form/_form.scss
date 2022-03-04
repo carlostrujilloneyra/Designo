@@ -1,0 +1,147 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+.main-form{
+	position: relative;
+	width: 100%;
+	margin-bottom: 12rem;
+
+	@include responsive(tablet){
+		padding: 0 3.6rem;
+	}
+
+	@include responsive(desktop){
+		padding: 0 10rem;
+		margin-bottom: 16rem;
+	}
+}
+
+// Contenedor del form 
+.main-form__container{
+	display: grid;
+	background-color: var(--colorPeach);
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 22rem 47rem;
+	row-gap: 3.2rem;
+	padding: 5.4rem 2.4rem;
+	overflow: hidden;
+
+	&::before{
+		@include before(0, -4rem, 60rem, 30rem){
+			background-image: url('../../../../../assets/shared/desktop/bg-pattern-two-circles.svg');
+			
+			@include responsive(540px){
+				left: 2rem;
+			}
+			
+			@include responsive(700px){
+				top: -4rem;
+				left: 0rem;
+				width: 58rem;
+				height: 60rem;
+				background-image: url('../../../../../assets/home/desktop/bg-pattern-hero-home.svg');
+				background-size: 58rem 60rem;
+			}
+
+			@include responsive(tablet){
+				width: 64rem;
+				height: 64rem;
+				background-size: 64rem 64rem;
+				top: -3rem;
+				left: 4rem;
+			}
+
+			@include responsive(desktop){
+				top: -5rem;
+				left: 10rem;
+			}
+		}
+	}
+
+	@include responsive(tablet){
+		padding: 5.4rem 3.6rem;
+		border-radius: 1.6rem;
+	}
+
+	@include responsive(900px){
+		padding: 5.4rem 4.8rem;
+	}
+
+	@include responsive(desktop){
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(1, minmax(45rem, 48rem));
+		column-gap: 3.2rem;
+	}
+}
+
+
+.main-form__info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	z-index: 200;
+
+	@include responsive(700px){
+		align-items: flex-start;
+		text-align: start;
+	}
+}
+
+// Estilos para el formulario
+.input-text, .text-area{
+	width: 100%;
+	height: 4rem;
+	background-color: transparent;
+	font-family: var(--fontText);
+	color: white;
+	font-size: 1.5rem;
+	margin-top: 1.2rem;
+	margin-bottom: 2.4rem;
+	padding-left: 1.6rem;
+	border: none;
+	border-bottom: .2rem solid var(--colorWhite);
+	outline: none;
+
+	@include responsive(desktop){
+
+	}
+
+	&:hover{
+		cursor: pointer;
+	}
+
+	&::placeholder{
+		color: white;
+		opacity: .4;
+		transition: all .4s;
+	}
+
+	&:focus::placeholder{
+		opacity: 0;
+	}
+}
+
+.text-area{
+	height: 10rem;
+	resize: none;
+}
+
+.container-form{
+	z-index: 200;
+}
+
+// Botón Submit
+.container-form-button{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-top: 3.6rem;
+}
+
+.main-button--submit{
+	display: inline-block;
+	padding: 1.6rem 3.2rem;
+	margin: 0;
+}
