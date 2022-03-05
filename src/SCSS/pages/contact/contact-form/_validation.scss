@@ -1,0 +1,57 @@
+@use '../../../abstracts/variables' as *;
+@use '../../../abstracts/mixins' as *;
+
+// Botón Submit
+.main-button-contact{
+	font-family: var(--fontText);
+	font-size: 1.5rem;
+	font-weight: 600;
+	border-radius: 1.6rem;
+	outline: none;
+	border: none;
+	margin-bottom: 1.6rem;
+
+	&:hover{
+		background-color: var(--colorLightPeach);
+		cursor: pointer;
+	}
+}
+
+small{
+	position: relative;
+	top: -1.2rem;
+	left: 1.2rem;
+	color: var(--colorWhite);
+	font-size: 1.4rem;
+	font-family: var(--fontText);
+	font-style: italic;
+	margin-right: .8rem;
+	visibility: hidden;
+
+	&.delete{
+		visibility: hidden;
+	}
+	
+	&::before{
+		@include before(0, 0, 2rem, 2rem){
+			left: auto;
+			right: -3.2rem;
+			background-image: url('../../assets/contact/desktop/icon-error.svg');
+		}
+	}
+}
+
+.small-error{
+	visibility: visible;
+	transition: all .4s;
+}
+
+// Cuando el correo fue enviado correctamente
+.email-succes{
+	color: var(--colorWhite);
+	font-size: 1.5rem;
+	font-style: italic;
+	font-family: var(--fontText);
+	text-align: center;
+	margin-bottom: 1.2rem;
+}
