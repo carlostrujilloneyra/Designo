@@ -11,7 +11,7 @@
 	transition: right .5s;
 
 	@include responsive(700px){
-		position: relative;
+		position: static;
 		top: 0;
 		left: auto;
 		right: 0;
