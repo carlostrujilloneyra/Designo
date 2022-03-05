@@ -2,10 +2,27 @@
 @use '../../abstracts/mixins' as *;
 
 .main-header__nav{
-	display: none;
+	position: fixed;
+	top: 9rem;
+	right: -100vw;
+	width: 100%;
+	background-color: var(--colorBlack);
+	padding: 2.4rem;
+	transition: right .5s;
 
-	@include responsive(tablet){
-		display: block;
+	@include responsive(700px){
+		position: relative;
+		top: 0;
+		left: auto;
+		right: 0;
+		width: auto;
+		background-color: transparent;
+		padding: 0;
+	}
+
+	// Clases para el nav cuando se abra el menú hamburguesa
+	&--new{
+		right: 0;
 	}
 }
 
@@ -13,4 +30,9 @@
 .main-header__list{
 	display: flex;
 	list-style: none;
+	flex-direction: column;
+	
+	@include responsive(700px){
+		flex-direction: row;
+	}
 }

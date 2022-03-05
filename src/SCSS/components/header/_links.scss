@@ -3,19 +3,28 @@
 
 // Items
 .main-list__item{
-	margin: 0 1.2rem;
+	margin-bottom: 1.6rem;
+	
+	@include responsive(700px){
+		margin: 0 1.2rem;
+	}
 }
 
 
 // Enlaces
 .links{
 	position: relative;
-	color: var(--colorDarkGrey);
-	font-size: 1.4rem;
+	color: var(--colorWhite);
+	font-size: 2.4rem;
 	font-weight: 400;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: .4rem .8rem;
+
+	@include responsive(700px){
+		font-size: 1.4rem;
+		color: var(--colorDarkGrey);
+	}
 
 	&::before{
 		content: '';
