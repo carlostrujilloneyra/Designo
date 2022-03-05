@@ -22,7 +22,7 @@
 		</a>
 
 		<!-- Barra de navegación -->
-		<nav class="main-header__nav">
+		<nav class="main-header__nav" id="main-nav">
 			
 			<!-- Lista con los items -->
 			<ul class="main-header__list">
@@ -33,12 +33,12 @@
 		</nav>
 
 		<!-- Menú Hamburguesa -->
-		<div class="container-main-hamburguer"></div>
+		<div class="container-main-hamburguer" id="main-hamburguer"></div>
 	</header>
 
 	<!-- Hero -->
 
-	<div class="main-hero-services">
+	<div class="main-hero-services" id="main-hero" >
 		<div class="container-services">
 			<div class="container-services-info">
 				<h1 class="main-title main-title-services">Web design</h1>
@@ -119,15 +119,25 @@
 			<!-- Primer contenedor -->
 			<div class="article__first-part">
 				<h2 class="service-article-subtitle">App Design</h2>
-				<h3 class="service-article-view">View Projects</h3>
-				<a href="app-design.html">SEE</a>
+
+				<div class="container-projects">
+					<h3 class="main-view">View Projects</h3>
+					<a href="app-design.html" class="view">
+						<img src="assets/shared/desktop/icon-right-arrow.svg" alt="icon-right-arrow">
+					</a>
+				</div>
 			</div>
 
 			<!-- Segundo contenedor -->
 			<div class="article__second-part">
 				<h2 class="service-article-subtitle">Graphic Design</h2>
-				<h3 class="service-article-view">View Projects</h3>
-				<a href="graphic-design.html">SEE</a>
+				
+				<div class="container-projects">
+					<h3 class="main-view">View Projects</h3>
+					<a href="app-design.html" class="view">
+						<img src="assets/shared/desktop/icon-right-arrow.svg" alt="icon-right-arrow">
+					</a>
+				</div>
 			</div>
 			
 		</article>
@@ -220,5 +230,7 @@
 
 		</div>
 	</footer>
+
+	<script src="src/JS/script.js"></script>
 </body>
 </html>
