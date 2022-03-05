@@ -17,5 +17,9 @@ body{
 	flex-direction: column;
 	align-items: center;
 	min-height: 100vh;
+	padding-top: 9rem;
 
+	@include responsive(tablet){
+		padding-top: 0;
+	}
 }
