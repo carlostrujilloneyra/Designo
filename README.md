@@ -1,4 +1,4 @@
-# Designo
+# Designo Website
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/50873002/156905482-4731a6fb-26e6-4fcd-9cf2-8d740ff58943.gif" alt="screenshot" width="100%">
