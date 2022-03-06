@@ -9,7 +9,7 @@
 
 ## Acerca del Proyecto
 
-- Designo es una agencia creativa, fundada desde el 2010. Brindan servicios como "Web-design, App-design y Graphic design", los cuales prometen brindar resultados que satisfagan a sus clientes. Se tiene como objetivo poder crear marcas, productos y experiencias digitales. El sitio Web cuenta con secciones como: Home, Our Company, Locations y Contact. Es totalmente responsivo, el diseño fue tomado de Frontend Mentor, donde se empezó desde cero, usando las tecnologías mencionadas en la parte de abajo. Espero que sea de tu agrado el cuarto proyecto que realizo para poder demostrar mis conocimientos y habilidades del lado Frontend.
+- Designo es una agencia creativa, fundada desde el 2010. Brindan servicios como "Web Design, App Design y Graphic Design", los cuales prometen brindar resultados que satisfagan a sus clientes. Se tiene como objetivo poder crear marcas, productos y experiencias digitales. El sitio Web cuenta con secciones como: Home, Our Company, Locations y Contact. Es totalmente responsivo, el diseño fue tomado de Frontend Mentor, donde se empezó desde cero, usando las tecnologías mencionadas en la parte de abajo. Espero que sea de tu agrado el cuarto proyecto que realizo para poder demostrar mis conocimientos y habilidades del lado Frontend.
 
 
  ## Objetivos del Proyecto
