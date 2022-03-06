@@ -5,10 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Designo-Website</title>
+	<link rel="shortcut icon" href="assets/shared/desktop/logo-light.png" type="image/png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="src/CSS/styles.css">
+	<!-- Animaciones mediante el scroll -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
@@ -50,18 +53,19 @@
 			</div>
 
 			<!-- Contenedor del formulario -->
-			<div class="container-form">
+			<div class="container-form" id="container-form" class="container-form">
 
 				<!-- Formulario -->
-				<form action="#" autocomplete="off">
+				<form action="#" autocomplete="off" id="main-form">
 					<input type="text" placeholder="Name" name="name" class="input-text" id="name" autocomplete="off">
 					<input type="email" placeholder="Email Address" name="email" class="input-text" id="email" autocomplete="off">
+					<small  id="small">Please insert a valid email</small>
 					<input type="text" placeholder="Phone" name="phone" class="input-text" id="phone" autocomplete="off">
 					<textarea rows="12" placeholder="Your Message" class="text-area" id="message" autocomplete="off"></textarea>
 
 					<!-- Botón Submit -->
 					<div class="container-form-button">
-						<a href="#" class="main-button main-button--submit" id="button-submit">SUBMIT</a>
+						<input type="submit" value="SUBMIT" id="input-submit" class="main-button main-button--submit main-button-contact">
 					</div>
 				</form>
 			</div>
@@ -189,5 +193,6 @@
 	</footer>
 
 	<script src="src/JS/script.js"></script>
+	<script src="src/JS/animation.js"></script>
 </body>
 </html>
