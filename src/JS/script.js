@@ -19,11 +19,12 @@ showNav('main-hamburguer', 'main-nav','main-hero');
 const form = document.getElementById('main-form')
 const email = document.getElementById('email')
 
-form.addEventListener('submit', (e) => {
-	e.preventDefault();
-	checkEmail();
-})
-
+if(form, email){
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		checkEmail();
+	})	
+}
 const checkEmail = () => {
 	const emailValue = email.value.trim();
 	
