@@ -1333,7 +1333,7 @@ a {
   position: relative;
   order: 2;
   padding: 0 2.4rem;
-  z-index: 100;
+  z-index: 400;
 }
 @media screen and (min-width: 1024px) {
   .main-hero__info--about::before {
@@ -1348,6 +1348,7 @@ a {
     background-repeat: no-repeat;
     transform: rotate(135deg);
     opacity: 0.7;
+    z-index: -100;
   }
 }
 @media screen and (min-width: 1180px) {
