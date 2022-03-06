@@ -10,7 +10,7 @@
 
 	&::before{
 		@include before(0,0, 100%, 100%){
-			background-image: url('../../../../assets/home/desktop/bg-pattern-hero-home.svg');
+			background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			transition: all .5s;
