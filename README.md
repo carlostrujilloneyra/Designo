@@ -1,4 +1,4 @@
-# Designo
+# Designo Website
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/50873002/156905482-4731a6fb-26e6-4fcd-9cf2-8d740ff58943.gif" alt="screenshot" width="100%">
@@ -9,7 +9,7 @@
 
 ## Acerca del Proyecto
 
-- Designo 
+- Designo es una agencia creativa, fundada desde el 2010. Brindan servicios como "Web-design, App-design y Graphic design", los cuales prometen brindar resultados que satisfagan a sus clientes. Se tiene como objetivo poder crear marcas, productos y experiencias digitales. El sitio Web cuenta con secciones como: Home, Our Company, Locations y Contact. Es totalmente responsivo, el diseño fue tomado de Frontend Mentor, donde se empezó desde cero, usando las tecnologías mencionadas en la parte de abajo. Espero que sea de tu agrado el cuarto proyecto que realizo para poder demostrar mis conocimientos y habilidades del lado Frontend.
 
 
  ## Objetivos del Proyecto
